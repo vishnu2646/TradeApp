@@ -1,38 +1,246 @@
-.App {
-  text-align: center;
+.toolbar{
+    width: 100%;
+    background-color: blueviolet;
+    /* height: 80px; */
+    box-shadow: 1px 0 7px rgb(0 0 0 / 50%);
+    height: 60px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.toolbar__logo a{
+    color: #FFF;
+    text-decoration: none;
+    font-size: 2rem;
+    padding: 0 1rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.toolbar__navigation{
+    display: flex;
+    height: 100%;
+    align-items: center;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.toolbar_navigation-items a{
+    color: #FFF;
+    text-decoration: none;
 }
 
-.App-link {
-  color: #61dafb;
+.toolbar_navigation-items a:hover,.toolbar_navigation-items a:active{
+    color: #fa923f;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.toolbar_navigation-items ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.toolbar_navigation-items li{
+    padding: 0 0.5rem;
+    /* font-size: 20px; */
+}
+
+.spacer{
+    flex: 1;
+}
+
+.toolbar__logo{
+    margin-left: 0.5rem;
+}
+
+.toggle-button{
+    height: 24px;
+    width: 30px;
+    margin-left: 20px;
+    border: none;
+    cursor: pointer;
+    background: transparent;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.toggle-button:focus{
+    outline: none;
+}
+
+.toggle-button__line{
+    width: 100%;
+    height: 2px;
+    background-color: #FFF;
+}
+
+.side-drawer{
+    height: 100%;
+    background: #FFF;
+    box-shadow: 1px 0 7px rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 60%;
+    max-width: 400px;
+    z-index: 200;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-out;
+}
+
+.fivechart h3 span,.tenchart h3 span{
+    background-color: rgba(137, 43, 226, 0.603);
+    color: #FFF;
+    padding: 5px;
+    font-size: 25px;
+    border-radius: 15px;
+}
+
+.side-drawer.open{
+    transform: translateX(0);
+}
+
+.side-drawer ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.side-drawer li{
+    margin: 0.5rem 0;
+}
+
+.side-drawer a{
+    color: blueviolet;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+.side-drawer a:hover,
+.side-drawer a:active{
+    color: #fa923f;
+}
+
+@media screen and (max-width:769px) {
+    .toolbar_navigation-items{
+        display: none;
+    }
+    .toolbar__logo a img{
+        display: none;
+    }
+}
+
+@media screen and (min-width:769px) {
+    .side-drawer{
+        display: none;
+    }
+
+    .toolbar__toggle-button{
+        display: none;
+    }
+}
+
+.marketChart{
+    display: flex;
+    margin: 15px;
+}
+
+.hpchart{
+    width: 48%;
+    padding: 25px;
+}
+
+.hpchart h2 span{
+    background-color: rgba(137, 43, 226, 0.603);
+    color: #FFF;
+    padding: 5px;
+    font-size: 25px;
+    border-radius: 15px;
+}
+
+@media screen and (max-width: 769px){
+    .marketChart{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .hpchart{
+        width: 100%;
+    }
+}
+
+.homepage{
+    margin: 10px;
+    background-color: #FFF;
+    box-shadow: 1px 0 7px rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.sectorialFlow,.prosetup{
+    padding: 20px;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+ 
+::-webkit-scrollbar-thumb {
+  background: blueviolet; 
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(137, 43, 226, 0.856); 
+}
+
+.footer{
+    /* position: fixed; */
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: blueviolet;
+    text-align: center;
+    color: #f4f4f4;
+    padding: 10px;
+}
+
+.company-name{
+    margin: 0.5rem;
+}
+
+.tenminutes,.fiveminutes{
+    margin: 50px;  
+}
+
+.tenminutes:hover,.fiveminutes:hover, .hpchart:hover{
+    background-color: #FFF;
+    box-shadow: 1px 0 7px rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    transition: .2s ease-in-out;
+}
+
+.tenchart,.fivechart{
+    padding: 20px;
+}
+
+@media screen and (max-width:576px) {
+    .tenminutes,.fiveminutes{
+        margin: 0px;  
+    }
+    .tenchart, .fivechart{
+        padding: 0px;
+    }
+}
+
+.mobileLogo{
+    text-align: center;
+    padding: 25px;
+}
+
+.toolbar__logo a img{
+    width: 70px;
 }

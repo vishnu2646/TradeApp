@@ -1,0 +1,56 @@
+.card1{
+    width: 350px;
+    height: 250px;
+    padding: 20px;
+    background: linear-gradient(to left, #8576F6, #9a4fe9);
+    border-radius: 10px;
+    color: #FFF;
+    margin: 15px;
+}
+
+.card1:nth-child(2){
+    background: linear-gradient(to left, #6AA5E3, #6866E9);
+}
+
+.card1:nth-child(4){
+    background: linear-gradient(to left, #8576F6, #9a4fe9);
+}
+
+.card1:nth-child(3){
+    background: linear-gradient(to left, #fef683, #fF929b);
+}
+
+.card1 .card-icon{
+    margin-bottom: 15px;
+    width: 50px;
+    height: 50px;
+    background-color: rgba(255,255,255,0.4);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 8px #FFF;
+}
+
+.card1 .card-icon span i{
+    font-size: 26px;
+}
+
+.card1 .card-detail{
+    margin-bottom: 20px;
+    margin-top: 25px;
+}
+
+.cards{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+@media screen and (max-width:769px) {
+    .cards{
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+}

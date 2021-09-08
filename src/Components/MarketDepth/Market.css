@@ -1,0 +1,40 @@
+.hptable{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 15px;
+}
+
+.high{
+    width: 48%;
+}
+
+.intra{
+    width: 48%;
+}
+
+@media screen and (max-width:975px){
+
+    .hptable{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 10px;
+    }
+
+    .high{
+        margin: 10px;
+        width: 95%;
+    }
+
+    .intra{
+        margin: 10px;
+        width: 95%;
+    }
+
+}
+
+.MuiTypography-root.MuiTypography-h6{
+    font-size: 25px;
+}
