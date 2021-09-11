@@ -3,6 +3,7 @@ import Cards from './Cards/Cards'
 import Sectorial from './Charts/Sectorial'
 
 const Home = () => {
+
     return (
         <div className="homepage">
             <Cards/>

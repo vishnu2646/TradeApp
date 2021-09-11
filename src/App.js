@@ -13,7 +13,7 @@ import conversation from './Components/conversation/conversation';
 
 class App extends Component{
   state = {
-    sideDrawerOpen:false
+    sideDrawerOpen:false,
   };
 
   drawerToggleClickHandler = () => {
@@ -47,7 +47,6 @@ class App extends Component{
         </div>
         <Footer/>
       </Router>
-      
     );
   }
 }

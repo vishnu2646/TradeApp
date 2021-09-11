@@ -1,5 +1,6 @@
-import React from 'react'
+// import React,{ useState,useEffect } from 'react'
 import './Cards.css'
+import React from 'react'
 
 const Cards = () => {
 
@@ -11,8 +12,16 @@ const Cards = () => {
     //         .then((data) => data.json())
     //         .then((data) => setFirst(data.data[0]))
     // }
+
+    // const TopData1 = () =>{
+    //     fetch("https://dth.tredcode.com/screen?type=MONEYFLOW%20REL%20B")
+    //         .then((data) => data.json())
+    //         .then((data) => setSecond(data.data[0]))
+    // }
+
     // useEffect(() => {
     //     TopData();
+    //     TopData1();
     // })
 
     return (
