@@ -1,3 +1,8 @@
+.marketChart{
+	display:flex;
+	align-items:center;
+	justify-content:center;
+}
 .hptable{
     display: flex;
     align-items: center;
